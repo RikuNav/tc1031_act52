@@ -16,7 +16,7 @@ int main(int argc, char* argv[]) {
   int m, n, value; 
   string word, p;
   map<string, int>dictionary; 
-  int salary = 0;
+  
   
   cin >> m; 
   cin >> n; 
@@ -30,6 +30,7 @@ int main(int argc, char* argv[]) {
 
   // Word reading and salary calculation. 
   for(int i = 0; i < n; i++) {
+    int salary = 0;
     while(true) {
       cin >> p; 
       if (p == ".") {
