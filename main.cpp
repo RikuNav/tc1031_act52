@@ -13,29 +13,30 @@
 using namespace std;
 
 int main(int argc, char* argv[]) {
-  int m, n, valor; 
-  string palabra, p;
-  map<string, int>diccionario; 
+  int m, n, value; 
+  string word, p;
+  map<string, int>dictionary; 
+  int salary = 0;
+  
   cin >> m; 
   cin >> n; 
 
   // Dictionary creation.
   for(int i  = 0; i < m; i++) {
-    cin >> palabra; 
-    cin >> valor;
-    diccionario.insert(pair<string, int>(palabra, valor));  
+    cin >> word; 
+    cin >> value;
+    dictionary.insert(pair<string, int>(word, value));  
   }
 
   // Word reading and salary calculation. 
   for(int i = 0; i < n; i++) {
-    int salario = 0;
     while(true) {
       cin >> p; 
       if (p == ".") {
         break;
       }
-      salario += diccionario[p]; 
-    } cout << salario << endl;
+      salary += dictionary[p]; 
+    } cout << salary << endl;
 	}
 	return 0;
 }
